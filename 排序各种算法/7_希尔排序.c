@@ -11,11 +11,11 @@ void Shell_Sort(int a[],int N)
 	int i,j,p;
 	int temp;
 
-	for(p=N/2;p>0;p=p/2)
+	for(p=N/2;p>0;p=p/2)   //p是组数
 		for(i=p;i<N;i++)
 		{
 			temp=a[i];
-			for(j=i;j>=p;j=j-p)
+			for(j=i;j>=p;j=j-p)   //插入排序
 				if(temp<a[j-p])
 					a[j]=a[j-p];
 				else

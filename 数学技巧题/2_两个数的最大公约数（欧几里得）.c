@@ -23,11 +23,12 @@ int Gcd(int m,int n)
 	return m;
 }
 
-void main()
+int main()
 {
 	int y=0;
 	int m,n;
 	scanf("%d %d",&m,&n);
 	y=Gcd(m,n);
 	printf("answer is %d\n",y);
+    return 0;
 }

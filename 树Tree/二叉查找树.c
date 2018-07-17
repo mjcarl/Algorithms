@@ -31,7 +31,7 @@ BiTree Insert(int x,BiTree T)   //插入元素到二叉查找树里，T指向树根
 		T->rchild=Insert(x,T->rchild);
 	return T;
 }
-BiTree FindMin(BiTree T)
+BiTree FindMin(BiTree T)  
 {
 	if (T == NULL)
 		return NULL;
@@ -50,12 +50,12 @@ BiTree Delete(int x, BiTree T)
 		T->rchild = Delete(x, T->rchild);
 	else   //找到要删除的节点
 	{	
-		if (T->lchild != NULL && T->rchild != NULL)
+		if (T->lchild != NULL && T->rchild != NULL)  //左右都有孩子
 		{
-			//找右子树中的最小值节点，使其与x交换
+			//找 右子树 中的最小值节点，使其与x交换
 			Tmp = FindMin(T->rchild);
 			T->data = Tmp->data;
-			T->rchild = Delete(Tmp->data, T->rchild);
+			T->rchild = Delete(Tmp->data, T->rchild);  //删除代替了自己的左子树中的结点
 		}
 		else
 		{

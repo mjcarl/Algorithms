@@ -27,7 +27,7 @@ int pop(stack s)
 		p=s->next;
 		s->next=s->next->next;
 		re=p->Element;
-		free(p);
+		free(p);   //////////
 	}
 	return re;
 }
