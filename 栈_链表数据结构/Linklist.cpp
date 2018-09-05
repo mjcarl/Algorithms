@@ -68,7 +68,7 @@ int Linklist::Delete(int i)  //删除第i个节点并返回值
 		delete p;
 		return del;
 	}
-	for (j = 0; j < i - 2 && p->next != NULL; j++)
+	for (j = 0; j < i - 2 && p->next != NULL; j++)  //找到要被删除的节点的前一个节点
 	{
 		p = p->next;
 	}

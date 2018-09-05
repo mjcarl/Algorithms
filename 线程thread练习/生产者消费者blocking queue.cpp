@@ -8,6 +8,7 @@ using namespace std;
 mutex m;
 condition_variable full,empty;
 boost::circular_buffer<int> Q(10);// 缓冲区大小为10,缓冲区数据为int，这里充当blocking queue
+
 bool flag=true;//一个简陋的设计，当不再生产时采用flag终止消费者线程
 void put(int x){
     for(int i=0;i<x;i++){

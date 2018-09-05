@@ -25,7 +25,7 @@ bool IsBalanced(TreeNode* pRoot, int* pDepth)
       *pDepth = 1 + ((left > right)? left : right);
       return true;
     }
-}
+  }
   return false;
 }
 

@@ -14,7 +14,7 @@ int main()      //联机算法--best    一次扫描读过出结果
 		sum=sum+a[j];
 		if(sum>max)
 			max=sum;
-		else if(sum<0)  //666
+		else if(sum<0)
 			sum=0;
 	}
 	printf("max=%d\n",max);

@@ -7,25 +7,25 @@ int n, w;
 vector<int> a;
 int ans = 0;
 
-void dfs(int sum,int loc)
+void dfs(int sum_now, int loc)
 {
-	if (sum > w)
+	if (sum_now > w)
 		return;
-	else if (sum <= w)
+	else if (sum_now <= w)
 	{
-		cout << sum << endl;
+		cout << sum_now << endl;
 		++ans;
 	}
-		
+
 	for (int i = loc; i < n; i++)   //因为不用打印每种情况，所以不需要对vector进行处理
-		dfs(sum + a[i], i + 1);
+		dfs(sum_now + a[i], i + 1);
 }
 
 
 int main()
 {
 	cin >> n>> w;     //n个零食，背包总容量为w
-	int tmp, sum = 0;	
+	int tmp, sum = 0;
 	for (int i = 0; i < n; i++)
 	{
 		cin >> tmp;

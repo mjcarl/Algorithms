@@ -35,7 +35,7 @@ void write()    //写者
             unique_lock<mutex> lk(m);   //写者和写者之间，写者和读者之间都要互斥
             if(!ptr.unique())   //如果存在其它写者或读者，则需要拷贝当前的vector
                 ptr.reset(new vector<int>(*ptr));
-            assert(ptr.unique());
+            assert(ptr.unique());   //如果ptr不唯一，说明可能还有读者在访问
             ptr->push_back(i);
         }
     }

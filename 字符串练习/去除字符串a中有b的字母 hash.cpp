@@ -10,7 +10,7 @@ int main()
 	cin>>s1>>s2;
 	map<char,int> mp2;
 	auto it = s2.begin();
-	while(it != s2.end())
+	while(it != s2.end())  //把要被删除的字母放到map内统计
 	{
 		mp2[*it]++;
 		it++;
